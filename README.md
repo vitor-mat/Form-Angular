@@ -1,27 +1,62 @@
-# AngTut
+# Angular Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+Uma aplicação de formulário aonde o usuário digita suas informações que ficaram salvas no local storage permitindo que sejam consultadas e editadas mesmo após o fechamento do navegador angular js.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) ![Css](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## SUMÁRIO
 
-## Code scaffolding
+- Status
+- Deploy
+- Features
+- Demonstração da Aplicação
+- Como Rodar a Aplicação
+- Pré Requisitos Para Rodar a Aplicação
+- Tecnologias utilizadas
+- Autor
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Status
 
-## Build
+✨Concluído ✨
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- O usuário pode digitar suas informações em diferentes tipos de inputs.
+- Quando o usuário marca salvar as informações ficam armazenadas no local storage.
+- Quando salvas as informações os nputs são desativados.
+- Ao abrir a apliação se houver informações no storage os inputs iniciam desativados.
+- Senão houver informações no storage ao iniciar a aplicação os campos iniciam disponíveis para salvar os dados.
+- Caso o usuário tente salvar as informações com algum item faltando é emitido um erro através de uma caixa de alerta.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Demonstração da Aplicação
 
-## Running end-to-end tests
+<img alt="todo list desktop image" src="./readme_files/form.gif"/>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Pré Requisitos Para Rodar a Aplicação
 
-## Further help
+Você precisa de um browser de internet (navegador) e ter o node instalado na sua máquina.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Como Rodar a Aplicação
+
+Primeiro, para rodar o servidor de desenvolvimento, abra a pasta do projeto no seu terminal e rodo um dos seguintes comandos:
+
+```bash
+ng serve
+```
+
+Abra em [http://localhost:4200](http://localhost:4200) para ver a resposta do servidor no navegador.
+
+## Tecnologias Utilizadas
+
+- [Angular](https://angular.io/docs)
+- [Css3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+
+## Autor
+
+<img alt="author photo" src="./readme_files/vitor.jpg" width="250">
+
+Feito por Vitor Mateus
+
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/vitor_dev_/) [![linkeding](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vitor-mateus-2a42461a2/)
+
+
