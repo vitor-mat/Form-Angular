@@ -3,36 +3,36 @@
   <div class="inputs-container">
     <label for="name">
       <span>Nome</span>
-      <input type="text" id="name" disabled />
+      <input type="text" id="name" [disabled]="disableState" />
     </label>
     <div class="label-group">
       <label for="birth">
         <span>Data de nascimento</span>
-        <input type="date" id="birth" disabled />
+        <input type="date" id="birth" [disabled]="disableState" />
       </label>
       <label for="codeOFId">
         <span>Código de identificação</span>
-        <input type="number" id="codeOFId" disabled />
+        <input type="number" id="codeOFId" [disabled]="disableState" />
       </label>
     </div>
     <label for="email">
       <span>Email</span>
-      <input type="email" id="email" disabled />
+      <input type="email" id="email" [disabled]="disableState" />
     </label>
     <label for="password">
       <span>Senha</span>
-      <input type="password" id="password" disabled />
+      <input type="password" id="password" [disabled]="disableState" />
     </label>
     <label for="sex">
       <span>Sexo</span>
-      <select id="sex" disabled>
+      <select id="sex" [disabled]="disableState">
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
       </select>
     </label>
     <label id="terms-label">
       <span>Eu concordo com os termos</span>
-      <input type="checkbox" id="terms" disabled />
+      <input type="checkbox" id="terms" [disabled]="disableState" />
     </label>
   </div>
   <button 
