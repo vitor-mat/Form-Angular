@@ -35,10 +35,18 @@
       <input type="checkbox" id="terms" disabled />
     </label>
   </div>
-  <button class="btn-edit">
+  <button 
+    #btnEdit
+    class="btn-edit"
+    (click)="allowEditMode(btnEdit, btnSave)"
+  >
     Editar Formulario
   </button>
-  <button class="btn-save">
+  <button 
+    #btnSave
+    class="btn-save"
+    (click)="saveData(btnEdit, btnSave)"
+  >
     Salvar Dados
   </button>
 </div>
