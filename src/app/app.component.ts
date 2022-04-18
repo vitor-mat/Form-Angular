@@ -15,7 +15,6 @@ export class AppComponent {
     codeOfIdValue: '',
     emailValue: '',
     passwordValue: '',
-    repasswordValue:'',
     sexSelectValue:'',
     termsValue: false
   };
@@ -56,7 +55,6 @@ export class AppComponent {
       this.employeeData.codeOfIdValue.trim().length &&
       this.employeeData.emailValue.trim().length &&
       this.employeeData.passwordValue.trim().length &&
-      this.employeeData.repasswordValue.trim().length &&
       this.employeeData.sexSelectValue.trim().length &&
       this.employeeData.termsValue
     ){
@@ -65,4 +63,30 @@ export class AppComponent {
     return true
   }
 
+  getInputValue(data: string, typeInput: string){
+    switch(typeInput){
+      case "name": 
+        this.employeeData.nameValue = data;
+        break;
+      case "birth":
+        this.employeeData.birthValue = data;
+        break;
+      case "codeOfId":
+        this.employeeData.codeOfIdValue = data;
+        break;
+      case "email":
+        this.employeeData.emailValue = data;
+        break;
+      case "password":
+        this.employeeData.passwordValue = data;
+        break;
+      case "sex":
+        this.employeeData.sexSelectValue = data;
+        break;
+    }
+  }
+
+  getCheckValue(isCheck: boolean){
+    this.employeeData.termsValue = isCheck;
+  }
 }

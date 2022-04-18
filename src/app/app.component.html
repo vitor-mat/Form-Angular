@@ -3,50 +3,51 @@
   <div class="inputs-container">
     <label for="name">
       <span>Nome</span>
-      <input type="text" id="name" [disabled]="disableState" />
+      <input #name  type="text" id="name" [disabled]="disableState"  (input)="getInputValue(name.value, 'name')" [value]="employeeData.nameValue"/>
     </label>
     <div class="label-group">
       <label for="birth">
         <span>Data de nascimento</span>
-        <input type="date" id="birth" [disabled]="disableState" />
+        <input #birth type="date" id="birth" [disabled]="disableState" (input)="getInputValue(birth.value, 'birth')" [value]="employeeData.birthValue"/>
       </label>
       <label for="codeOFId">
         <span>Código de identificação</span>
-        <input type="number" id="codeOFId" [disabled]="disableState" />
+        <input #codeOfId type="number" id="codeOFId" [disabled]="disableState" (input)="getInputValue(codeOfId.value, 'codeOfId')" [value]="employeeData.codeOfIdValue"/>
       </label>
     </div>
     <label for="email">
       <span>Email</span>
-      <input type="email" id="email" [disabled]="disableState" />
+      <input #email type="email" id="email" [disabled]="disableState" (input)="getInputValue(email.value, 'email')" [value]="employeeData.emailValue"/>
     </label>
     <label for="password">
       <span>Senha</span>
-      <input type="password" id="password" [disabled]="disableState" />
+      <input #password type="password" id="password" [disabled]="disableState" (input)="getInputValue(password.value, 'password')" [value]="employeeData.passwordValue"/>
     </label>
     <label for="sex">
       <span>Sexo</span>
-      <select id="sex" [disabled]="disableState">
+      <select #sex id="sex" [disabled]="disableState" (input)="getInputValue(sex.value, 'sex')" [value]="employeeData.sexSelectValue">
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
       </select>
     </label>
     <label id="terms-label">
       <span>Eu concordo com os termos</span>
-      <input type="checkbox" id="terms" [disabled]="disableState" />
+      <input #terms type="checkbox" id="terms" [disabled]="disableState" (input)="getCheckValue(terms.checked)" [checked]="employeeData.termsValue"/>
     </label>
   </div>
   <button 
     #btnEdit
     class="btn-edit"
     (click)="allowEditMode(btnEdit, btnSave)"
+    ng-model="disableState"
   >
     Editar Formulario
   </button>
-  <button 
+  <button
     #btnSave
     class="btn-save"
     (click)="saveData(btnEdit, btnSave, alertError)"
-  >
+    >
     Salvar Dados
   </button>
   <div 
