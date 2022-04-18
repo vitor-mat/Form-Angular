@@ -38,6 +38,7 @@
   <button 
     #btnEdit
     class="btn-edit"
+    [ngStyle]="btnEditInitalStyle"
     (click)="allowEditMode(btnEdit, btnSave)"
     ng-model="disableState"
   >
@@ -46,6 +47,7 @@
   <button
     #btnSave
     class="btn-save"
+    [ngStyle]="btnSaveInitalStyle"
     (click)="saveData(btnEdit, btnSave, alertError)"
     >
     Salvar Dados

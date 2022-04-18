@@ -19,7 +19,12 @@ export class AppComponent {
     termsValue: false
   }));
 
-  disableState = true;
+  isDataInTheStorage = !!this.employeeData.nameValue;
+
+  disableState = this.isDataInTheStorage;
+
+  btnEditInitalStyle = this.isDataInTheStorage ? {display: 'block'} : {display: 'none'}
+  btnSaveInitalStyle = this.isDataInTheStorage ? {display: 'none'} : {display: 'block'}
 
   allowEditMode(btnEdit: HTMLButtonElement, btnSave: HTMLButtonElement) {
     btnEdit.setAttribute("style", "display: none;")
