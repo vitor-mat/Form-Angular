@@ -45,11 +45,12 @@
   <button 
     #btnSave
     class="btn-save"
-    (click)="saveData(btnEdit, btnSave)"
+    (click)="saveData(btnEdit, btnSave, alertError)"
   >
     Salvar Dados
   </button>
   <div 
+    #alertError
     class="alert-error"
   >
     Error: Todos os campos devem ser preenchidos.
