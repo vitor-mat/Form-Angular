@@ -3,36 +3,36 @@
   <div class="inputs-container">
     <label for="name">
       <span>Nome</span>
-      <input #name  type="text" id="name" [disabled]="disableState"  (input)="getInputValue(name.value, 'name')" [value]="employeeData.nameValue"/>
+      <input #name  type="text" id="name" [disabled]="disableState"  (input)="getInputValue(name.value, 'name', alertError)" [value]="employeeData.nameValue"/>
     </label>
     <div class="label-group">
       <label for="birth">
         <span>Data de nascimento</span>
-        <input #birth type="date" id="birth" [disabled]="disableState" (input)="getInputValue(birth.value, 'birth')" [value]="employeeData.birthValue"/>
+        <input #birth type="date" id="birth" [disabled]="disableState" (input)="getInputValue(birth.value, 'birth', alertError)" [value]="employeeData.birthValue"/>
       </label>
       <label for="codeOFId">
         <span>Código de identificação</span>
-        <input #codeOfId type="number" id="codeOFId" [disabled]="disableState" (input)="getInputValue(codeOfId.value, 'codeOfId')" [value]="employeeData.codeOfIdValue"/>
+        <input #codeOfId type="number" id="codeOFId" [disabled]="disableState" (input)="getInputValue(codeOfId.value, 'codeOfId', alertError)" [value]="employeeData.codeOfIdValue"/>
       </label>
     </div>
     <label for="email">
       <span>Email</span>
-      <input #email type="email" id="email" [disabled]="disableState" (input)="getInputValue(email.value, 'email')" [value]="employeeData.emailValue"/>
+      <input #email type="email" id="email" [disabled]="disableState" (input)="getInputValue(email.value, 'email', alertError)" [value]="employeeData.emailValue"/>
     </label>
     <label for="password">
       <span>Senha</span>
-      <input #password type="password" id="password" [disabled]="disableState" (input)="getInputValue(password.value, 'password')" [value]="employeeData.passwordValue"/>
+      <input #password type="password" id="password" [disabled]="disableState" (input)="getInputValue(password.value, 'password', alertError)" [value]="employeeData.passwordValue"/>
     </label>
     <label for="sex">
       <span>Sexo</span>
-      <select #sex id="sex" [disabled]="disableState" (input)="getInputValue(sex.value, 'sex')" [value]="employeeData.sexSelectValue">
+      <select #sex id="sex" [disabled]="disableState" (input)="getInputValue(sex.value, 'sex', alertError)" [value]="employeeData.sexSelectValue">
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
       </select>
     </label>
     <label id="terms-label">
       <span>Eu concordo com os termos</span>
-      <input #terms type="checkbox" id="terms" [disabled]="disableState" (input)="getCheckValue(terms.checked)" [checked]="employeeData.termsValue"/>
+      <input #terms type="checkbox" id="terms" [disabled]="disableState" (input)="getCheckValue(terms.checked, alertError)" [checked]="employeeData.termsValue"/>
     </label>
   </div>
   <button 

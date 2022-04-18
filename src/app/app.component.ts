@@ -69,7 +69,10 @@ export class AppComponent {
     return true
   }
 
-  getInputValue(data: string, typeInput: string){
+  getInputValue(data: string, typeInput: string, alertError: HTMLDivElement){
+
+    alertError.setAttribute("style", "display: none;")
+
     switch(typeInput){
       case "name": 
         this.employeeData.nameValue = data;
@@ -92,7 +95,10 @@ export class AppComponent {
     }
   }
 
-  getCheckValue(isCheck: boolean){
+  getCheckValue(isCheck: boolean, alertError: HTMLDivElement){
+
+    alertError.setAttribute("style", "display: none;")
+
     this.employeeData.termsValue = isCheck;
   }
 }
