@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  employeeData = {
+  employeeData = JSON.parse(localStorage.getItem('employeeData') || JSON.stringify({
     nameValue: '',
     birthValue: '',
     codeOfIdValue: '',
@@ -17,7 +17,7 @@ export class AppComponent {
     passwordValue: '',
     sexSelectValue:'',
     termsValue: false
-  };
+  }));
 
   disableState = true;
 
