@@ -34,6 +34,7 @@ export class AppComponent {
       btnEdit.setAttribute("style", "display: block;")
       btnSave.setAttribute("style", "display: none;")
       this.disableState = true;
+      localStorage.setItem('employeeData', JSON.stringify(this.employeeData));
       return;
     }
 
